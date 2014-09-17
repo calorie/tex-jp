@@ -1,0 +1,17 @@
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
+*.log
+/.vagrant
+/Berksfile.lock
+/cookbooks
+/Gemfile.lock
+/.bundle
+/cookbooks
+/.chef
+/vendor/bundle
+/tex/*
+!/tex/.gitkeep

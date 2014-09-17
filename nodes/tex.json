@@ -1,0 +1,7 @@
+{
+  "run_list": ["role[tex]"],
+  "tz": "Asia/Tokyo",
+  "locale": {
+    "lang": "ja_JP.UTF-8"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "variables": {
+    "tag": "latest"
+  },
+  "builders": [
+    {
+      "type": "docker",
+      "image": "phusion/baseimage:latest",
+      "export_path": "tex.tar"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "environment_vars": [
+        "HOME=/root"
+      ],
+      "inline": [
+        "/etc/my_init.d/00_regen_ssh_host_keys.sh",
+        "apt-get update -y",
+        "apt-get install -y curl"
+      ]
+    },
+    {
+      "type": "chef-solo",
+      "cookbook_paths": ["cookbooks", "site-cookbooks"],
+      "roles_path": "roles",
+      "run_list": ["role[tex]"],
+      "json": {
+        "tz": "Asia/Tokyo",
+        "locale": {
+          "lang": "ja_JP.UTF-8"
+        }
+      }
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "docker-import",
+      "repository": "calorie/tex-jp",
+      "tag": "{{user `tag`}}"
+    }
+  ]
+}
