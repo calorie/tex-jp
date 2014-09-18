@@ -10,6 +10,7 @@
 node['tex']['packages'].each do |pkg|
   package pkg do
     timeout 3600
+    options '--no-install-recommends'
   end
 end
 
