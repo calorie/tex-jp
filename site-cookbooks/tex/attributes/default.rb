@@ -9,4 +9,5 @@ default['tex']['packages'] = %w{
   texlive-latex-extra
   texlive-bibtex-extra
   ptex-bin
+  ghostscript
 }

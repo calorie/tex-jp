@@ -1,7 +1,7 @@
 guard :shell do
   watch /\Atex\/(.+)\.tex\z/ do |m|
     rel_path = m[0]
-    file_name = m[1]
+    file_name = File.basename(m[1], 'tex')
     full_path = File.expand_path(m[0])
     tex  = File.expand_path(File.join(File.dirname(__FILE__), 'tex'))
     cmd  = <<-EOH
