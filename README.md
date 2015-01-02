@@ -13,7 +13,7 @@ Tex-JP compile Japanese tex files on save.
 
 ```
 $ bundle install --path vendor/bundle --binstubs .bundle/bin
-$ bundle exec berks vendor cookbooks
+$ bundle exec berks vendor chef-repo/cookbooks
 $ packer build tex.json
 ```
 
