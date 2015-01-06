@@ -7,10 +7,9 @@
 *.log
 /.vagrant
 /Berksfile.lock
-/cookbooks
 /Gemfile.lock
 /.bundle
-/cookbooks
+/chef-repo/cookbooks
 /.chef
 /vendor/bundle
 /tex/*
