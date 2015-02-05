@@ -1,5 +1,6 @@
 default['tex']['packages'] = %w{
   fontconfig
+  fonts-ipafont
   texlive-latex-base
   texlive-lang-cjk
   latex-xcolor
